@@ -29,7 +29,7 @@ async function start() {
          console.log(`====================================\nСервер запущен, порт: ${PORT}\n====================================`)
       })
    } catch (e) {
-      // console.log(e)
+      console.log(e)
    }
 }
 
