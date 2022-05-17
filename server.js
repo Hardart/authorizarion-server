@@ -11,7 +11,7 @@ const errorMiddleware = require('./middlware/error-middleware')
 server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use(cookieParser())
-server.use(cors({ origin: 'http://localhost:3000' }))
+server.use(cors())
 server.use('/api', router)
 server.use(errorMiddleware)
 
@@ -23,7 +23,7 @@ async function start() {
             useNewUrlParser: true,
             useUnifiedTopology: true,
          },
-         () => console.log('БД подключена\n===================================='),
+         () => console.log('БД подключена\n====================================')
       )
       server.listen(PORT, () => {
          console.log(`====================================\nСервер запущен, порт: ${PORT}\n====================================`)
