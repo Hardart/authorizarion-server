@@ -12,7 +12,7 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use(cookieParser())
 server.use(cors())
-server.use('/api', router)
+server.use('/', router)
 server.use(errorMiddleware)
 
 async function start() {
